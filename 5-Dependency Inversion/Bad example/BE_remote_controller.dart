@@ -1,5 +1,5 @@
 // Bad example
-class TV {
+class TVdevice {
   void turnOn() {
     print('TV is turned on');
   }
@@ -11,7 +11,7 @@ class TV {
 
 // BE = Bad Example
 class BE_RemoteController {
-  TV tv = TV();
+  TVdevice tv = TVdevice();
   void pressPowerButton(bool isOn) {
     if (isOn) {
       tv.turnOn();

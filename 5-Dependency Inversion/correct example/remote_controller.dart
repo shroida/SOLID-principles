@@ -30,7 +30,7 @@ class Radio implements Device {
 class RemoteController {
   final Device device;
 
-  RemoteController({required this.device});
+  RemoteController( this.device);
 
   void pressPowerButton(bool isOn) {
     if (isOn) {

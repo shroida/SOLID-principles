@@ -1,4 +1,5 @@
 import '5-Dependency Inversion/Bad example/BE_remote_controller.dart';
+import '5-Dependency Inversion/correct example/remote_controller.dart';
 
 void main() {
   // BAD EXAMPLE: BEFORE APPLYING DEPENDENCY INVERSION
@@ -16,7 +17,12 @@ void main() {
 
   print('\n=========== | C O R R E C T    E X A M P L E |  =========');
 
-
-
-
+  Device tv = TV();
+  Device radio = Radio();
+  RemoteController tvRemoteController = RemoteController(tv);
+  tvRemoteController.pressPowerButton(true);
+  tvRemoteController.pressPowerButton(false);
+  RemoteController radioRemoteController = RemoteController(radio);
+  radioRemoteController.pressPowerButton(true);
+  radioRemoteController.pressPowerButton(false);
 }
