@@ -12,7 +12,7 @@ class TV {
 // BE = Bad Example
 class BE_RemoteController {
   TV tv = TV();
-  void PressPowerButton(bool isOn) {
+  void pressPowerButton(bool isOn) {
     if (isOn) {
       tv.turnOn();
     } else {
